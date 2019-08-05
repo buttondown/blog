@@ -1,0 +1,21 @@
+# Site settings
+title: Buttondown
+email: justin@buttondown.email
+description: > # this means to ignore newlines until "baseurl:"
+  Buttondown is the easiest way to start and grow your newsletter.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://blog.buttondown.email" # the base hostname & protocol for your site
+appurl: "https://buttondown.email"
+twitter_username: buttondownemail
+github_username:  buttondown-email
+permalink: /:categories/:year/:month/:day/:title
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+highlighter: rouge
+
+include:
+  - _redirects
