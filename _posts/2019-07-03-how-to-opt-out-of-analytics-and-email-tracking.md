@@ -7,4 +7,4 @@ tags: fa-user-secret
 layout: post
 ---
 
-<p>It's as easy as clicking a button on your <a href="https://buttondown.email/account">Account</a> page.</p><p>Specifically, <em>this</em> button:</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card"><img src="/content/images/2019/07/Screen-Shot-2019-07-03-at-1.26.07-PM.png" class="kg-image"></figure><!--kg-card-end: image--><p>(Okay, and then "Update settings".  Two buttons, then.)</p><p>Additionally, we'll be launching support for letting subscribers opt out of tracking &amp; analytics later this month — stay tuned for the announcement there.</p>
+<p>It's as easy as clicking a button on your <a href="https://buttondown.email/account">Account</a> page.</p><p>Specifically, <em>this</em> button:</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card"><img src="/img/ss2.png" class="kg-image"></figure><!--kg-card-end: image--><p>(Okay, and then "Update settings".  Two buttons, then.)</p><p>Additionally, we'll be launching support for letting subscribers opt out of tracking &amp; analytics later this month — stay tuned for the announcement there.</p>

@@ -7,7 +7,6 @@ tags: fa-line-chart
 layout: post
 ---
 
-<p><img src="/content/images/2017/11/Screen-Shot-2017-11-24-at-3.21.21-PM.png" alt="Screen-Shot-2017-11-24-at-3.21.21-PM"></p>
 <p>We've offered analytics for your emails for a while now, which is great: it's awesome to see what emails are really resonating with your subscribers and which ones, uh, aren't.</p>
 <p>But often it's important to get even more introspection into how folks interact with your emails.  We want you to be able to use Buttondown to answer questions like:</p>
 <ul>

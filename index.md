@@ -9,7 +9,9 @@ layout: page
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ post.title }}</h1>
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h1 class="post-title">{{ post.title }}</h1>
+    </a>
     <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
   </header>
 

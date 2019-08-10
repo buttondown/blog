@@ -9,13 +9,10 @@ layout: post
 
 <p>Howdy!  April had a <em>lot</em> of stuff — 184 commits, to be exact! — and a lot of that was laying groundwork and paying off technical debt, as well as some general performance improvements and housecleaning.  Still, we've got three exciting things to share:</p>
 <h3 id="youtubeembeds">YouTube embeds</h3>
-<p><img src="/content/images/2018/05/Screen-Shot-2018-05-04-at-11.20.16-AM.png" alt="Screen-Shot-2018-05-04-at-11.20.16-AM"></p>
 <p>Adding a YouTube video to your email is as easy as dropping in the link, as you see above.  (More context: email clients don't support actual videos, so what we're doing here is generating a thumbnail of the video, adding a play button on top, and making it a link to the actual video!)</p>
 <h3 id="faq">FAQ</h3>
-<p><img src="/content/images/2018/05/Screen-Shot-2018-05-04-at-11.18.39-AM.png" alt="Screen-Shot-2018-05-04-at-11.18.39-AM"></p>
 <p>Y'all got questions, and a lot of them are very similar! (Which is more a condemnation of how troublesome and unintuitive parts of the interface are — which is on me, of course.) So <a href="https://www.notion.so/FAQ-23bd5faf51eb489a8e7a828bc5249459">here</a> is a central repository for all of that, lovingly hosted by <a href="https://notion.so">Notion</a>.</p>
 <h3 id="autosaving">Autosaving</h3>
-<p><img src="/content/images/2018/05/Screen-Shot-2018-05-04-at-11.19.25-AM.png" alt="Screen-Shot-2018-05-04-at-11.19.25-AM"></p>
 <p>See that lil checkbox in the bottom-right corner?  It will automatically save all your new drafts!  Don't have to worry about accidentally refreshing or navigating away or any of that pesky stuff.</p>
 <h3 id="upcomingupdates">Upcoming updates</h3>
 <p>My product roadmap is, as ever, prone to flights of fancy, but here's what's on the docket for May:</p>

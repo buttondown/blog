@@ -9,16 +9,12 @@ layout: post
 
 <p>Hey there! March has had a bunch of stuff arrive in the ol' Buttondown codebase, mostly on the smaller side of things.  Here's the quick laundry list:</p>
 <h3 id="sortyoursubscribers">Sort your subscribers</h3>
-<p><img src="/content/images/2018/04/Screen-Shot-2018-04-03-at-7.41.03-PM.png" alt="Screen-Shot-2018-04-03-at-7.41.03-PM"></p>
 <p>Coming shortly after publishing this — sorting by tags, as well!</p>
 <h3 id="redesignedarchivepages">Redesigned archive pages</h3>
-<p><img src="/content/images/2018/04/Screen-Shot-2018-04-03-at-7.42.01-PM.png" alt="Screen-Shot-2018-04-03-at-7.42.01-PM"></p>
 <p>Easier on the eyes.  (No changes to the actual emails being sent.)</p>
 <h3 id="streamlinedbillingflow">Streamlined billing flow</h3>
-<p><img src="/content/images/2018/04/Screen-Shot-2018-04-03-at-7.42.22-PM.png" alt="Screen-Shot-2018-04-03-at-7.42.22-PM"></p>
 <p>Okay, yeah, you might not be too excited about this, but it's a big deal I promise.</p>
 <h3 id="publicapilaunch">Public API launch</h3>
-<p><img src="/content/images/2018/04/Screen-Shot-2018-04-03-at-7.42.30-PM.png" alt="Screen-Shot-2018-04-03-at-7.42.30-PM"></p>
 <p>Still in the process of baking out more documentation, but it's live! If you're curious about this, feel free to <a href="mailto:justin@buttondown.email">email</a> me.</p>
 <h3 id="upcomingupdates">Upcoming updates</h3>
 <p>My product roadmap is, as ever, prone to flights of fancy, but here's what's on the docket for April:</p>
