@@ -202,3 +202,44 @@ pre {
         }
     }
 }
+
+
+
+
+.comparison-table {
+    width: 100%;
+    background: #f6f6f6;
+    border-radius: 10px;
+    border-collapse: collapse;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  
+    thead {
+      background-color: #3a3e2f;
+      color: #fff;
+    }
+  
+    span {
+      font-size: 16px;
+      display: block;
+      color: #777;
+    }
+    td:first-child,
+    th:first-child {
+      text-align: left;
+      font-size: 18px;
+    }
+  
+    tbody tr:nth-child(2n) {
+      background: #eee;
+    }
+    td,
+    th {
+      text-align: center;
+      font-size: 24px;
+      padding: 10px;
+    }
+    th {
+      font-size: 18px;
+    }
+  }
