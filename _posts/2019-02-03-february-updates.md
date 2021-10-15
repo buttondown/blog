@@ -2,7 +2,7 @@
 title: February Updates
 slug: february-updates
 date_published: 2019-02-04T02:31:10.000Z
-date_updated:   2019-02-04T02:31:10.000Z
+date_updated: 2019-02-04T02:31:10.000Z
 tags: fa-calendar
 layout: post
 ---
@@ -31,7 +31,7 @@ layout: post
 <p>It is a wild understatement to say that Buttondown would not exist or thrive without the support of the folks that use it, pay for it, write about it, report bugs about it, suggest features for it... you get the idea.</p>
 <p>In particular:</p>
 <ol>
-<li>Thanks to <a href="http://startupsesame.com">Ben</a> for suggesting the <em>rich text copy and paste</em>.</li>
+<li>Thanks to <a href="https://startupsesame.com">Ben</a> for suggesting the <em>rich text copy and paste</em>.</li>
 <li>Thanks to <a href="https://mxstbr.com/">Max</a> for suggesting the improved introspection into subscriber sources.</li>
 <li>Thanks to <a href="https://t.co/l66BbKV5pZ">Sonya</a> for reporting an issue with subscriber confirmation.</li>
 <li>Thanks to <a href="https://www.brizk.com/">Kai</a> for sharing Buttondown on <a href="https://www.densediscovery.com/">Dense Discovery</a>.</li>
@@ -39,4 +39,3 @@ layout: post
 <h2 id="agifforyourtroubles">A gif for your troubles</h2>
 <p><img src="https://media3.giphy.com/media/8PA8Ew3nw97yg/200w.webp?cid=3640f6095c57952555376a654592a5db" alt=""></p>
 <p>Have a good one, y'all, and always feel free to <a href="mailto:justin@buttondown.email">email me</a> if you need anything!</p>
-

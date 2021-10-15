@@ -5,7 +5,7 @@ tags: fa-tag
 image: /img/tags-share.png
 ---
 
-You've been able to reference subscriber metadata in your emails for 
+You've been able to reference subscriber metadata in your emails for
 a while now. This is a great way of creating a mail-merge-esque effect
 and customizing your newsletter for your recipients:
 
@@ -55,7 +55,7 @@ Or handling logic if someone doesn't have any tags at all:
 ```
 {% raw %}
 {% if not subscriber.tags %}
-I'd like to know more about you! Fill out a form [here](http://typeform.com).
+I'd like to know more about you! Fill out a form [here](https://typeform.com).
 {% endif %}
 {% endraw %}
 ```

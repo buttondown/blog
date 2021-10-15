@@ -2,7 +2,7 @@
 title: January Updates
 slug: january-updates
 date_published: 2018-02-01T16:24:32.000Z
-date_updated:   2018-02-01T16:25:13.000Z
+date_updated: 2018-02-01T16:25:13.000Z
 tags: fa-calendar
 layout: post
 ---
@@ -25,7 +25,7 @@ layout: post
 <li>A stand-alone analytics page.</li>
 </ul>
 <h3 id="spreadtheword">Spread the word!</h3>
-<p>If you've enjoyed using Buttondown, <a href="http://twitter.com/home?status=Buttondown%20is%20the%20best%20way%20to%20start%20and%20grow%20your%20newsletter%3A%20https%3A//buttondown.email">share it</a> with a friend! More people using Buttondown means more time and energy I can justify working on it.</p>
+<p>If you've enjoyed using Buttondown, <a href="https://twitter.com/home?status=Buttondown%20is%20the%20best%20way%20to%20start%20and%20grow%20your%20newsletter%3A%20https%3A//buttondown.email">share it</a> with a friend! More people using Buttondown means more time and energy I can justify working on it.</p>
 <h3 id="agifforyourtroubles">A gif for your troubles</h3>
 <blockquote class="imgur-embed-pub" lang="en" data-id="d8skZVO"><a href="//imgur.com/d8skZVO">Joey doesn&#39;t share food</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 <br />
