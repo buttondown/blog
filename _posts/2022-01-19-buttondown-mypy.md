@@ -154,10 +154,12 @@ That was around two solid engineer-days spread across two weeks (I was doing thi
 
 - 80% of the work was rote and pleasantly formulaic ("oh, that's actually an `Optional[float]` and not a `float`!"; "oh, I need to express this as an `Iterator` and not an `Iterable`!");
 - 20% of the work was unbounded and painful, a bit of an "unknown unknowns" situation ("how do I express a strongly typed spread operator?"; "how do I express a partial mock?")
+
 ## What advice do I wish I had?
 - This might be cheating, but if you know you want to *eventually* move to `mypy` start as early as possible. Even if you need to litter your codebase with `Any` and `# type: ignore` annotations, the sooner you start the better.
 - Getting the ground running with functional bits of your codebase as quickly as possible facilitates the entire process! Rather than trying to boil the ocean in your first go, start off with small little ponds of well-typed functionality before moving onto the hairier parts of your codebase. Django's app-based architecture lends itself very well to this, since ideally you're breaking out logically disjoint parts of your application early and often.
 - Aggressively separate "type reification" (keeping the logic of the codeabse intact, but annotating as necessary) with "type fixes" (changing the logic of the codebase in order to clean up your types). My first few efforts commingled the two, which led to issues where I was seeing divergences in the behavior of unit tests and it wasn't immediately obvious what changes had caused them.
+
 ## Was it worth it?
 
 *Yes!* As mentioned above, I don't think I'd advise folks in trying to do a "big-bang"-style migration in the manner I did unless your codebase is sufficiently small; because I was working on this branch alongside other feature branches, churn was non-trivial and it would have made more sense to go package-by-package, starting with smaller and more reified interfaces and moving onward.
@@ -211,6 +213,7 @@ Plus, I get to write functional pipelines like the following:
 Whereas before, Python made it a dangerous proposition to deal with partials and composition in this manner — what if `convert_response` doesn't map cleanly onto the arguments of `filter_extant_emails`!? — it's now safe.
 
 ## Useful resources
+
 - [Hypermodern Python](https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769), a very opinionated series of essays about structuring a well-typed & well-executed Python codebase. While this wasn't the *specific* impetus for me going whole-hog on `mypy`, it certainly was an accelerating factor.
 - [typeshed](https://github.com/python/typeshed), the official repository of type stubs. Without this package's growth and prominence I would have been at an absolute loss.
 - [dry-python's returns](https://github.com/dry-python/returns), a collection of utility functions to improve type safety in your codebase. I don't use a lot of this package — mostly I use the pipeline functions which allow me to compose functions in a typesafe manner — but it's an excellent resource to read through and shift over parts of your codebase to more of a mypy-friendly mode.
@@ -221,3 +224,6 @@ Whereas before, Python made it a dangerous proposition to deal with partials and
 [^3]: "stubs" are a silly name for a useful concept that ideally should not exist. They refer to separately-published sets of type signatures for packages that themselves do not have type signatures. For instance, `Django` has made a [conscious choice to not yet include type information in their package](https://code.djangoproject.com/ticket/29299), so a stubs package — aptly titled [django-stubs](https://github.com/typeddjango/django-stubs) — consists solely of type signatures for Django itself.
 [^4]: This is an incantation that may not look familiar. I use [poetry](https://python-poetry.org/) for Python dependency management and [Invoke](https://www.pyinvoke.org/) for task execution.
 
+## Coda
+
+Thank you to [Sumana Harihareswara](https://www.harihareswara.net) for proofreading this essay!
