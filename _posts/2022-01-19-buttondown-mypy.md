@@ -3,6 +3,7 @@ layout: post
 title: Migrating Buttondown to mypy
 description: The journey of 37,000 lines of static types begins with a single annotation.
 tags: fa-code
+image: /img/uploads/mypy-share.png
 ---
 
 
