@@ -19,4 +19,4 @@ The idea here is simple: rather than a binary state of "track stuff" or "don't t
 
 Buttondown is probably going to shift even _more_ in the data collection direction: I have plans this year to roll out bespoke page view counting, for instance, as well as to pull in some more payments-level data for paid newsletters. But rest assured: every step of the way, you get control over what you want Buttondown to hold onto, and that Buttondown's data is for all intents and purposes *your* data.
 
-(As always, if you have any thoughts about this or anything else, [email me](mailto:justin@buttondown.email) — I'm all ears!.)
+(As always, if you have any thoughts about this or anything else, [email me](mailto:justin@buttondown.email) — I'm all ears!)
