@@ -74,7 +74,16 @@ It's now _much_ easier for someone to visit Buttondown and understand how much t
 
 ## You said "shifting Buttondown's clientele away from free users" and _I'm_ a free user.
 
-spend helping folks out is time spent with folks who are not paying for Buttondown. 2. Many of these folks say something along the lines of "I wish my newsletter was large enough that I could pay you for your help!"
+I'm sorry! I really am. 
+
+I won't sugarcoat it — Buttondown's *free* tier is shrinking pretty significantly, from a thousand subscribers to a mere hundred. 
+
+Buttondown has grown a *lot* over the past few years; when I added the generous free tier back in 2016 I imagined a few friends using the platform, not tens of thousands of accounts sending millions of emails every month (and sending me thousands of questions & feature requests.)
+
+I've noticed two motifs alongside this growth:
+
+1. Around 85% of the time I spend helping folks out is time spent with folks who are not paying for Buttondown.
+2. Many of these folks say something along the lines of "I wish my newsletter was large enough that I could pay you for your help!"
 
 It's not feasible for me to continue supporting it in its current fashion: I am spending more time answering questions about setting up DNS and debugging CSS issues than I am spending time making it a better tool.
 
