@@ -9,11 +9,11 @@ for your business.
 
 Getting a Buttondown form onto Weebly is as quick and easy as everything else.
 
-First, go to your [share page](https://buttondown.email/share#form) and copy the HTML code under **Your Buttondown subscribe form**:
+First, go to your [share page](https://buttondown.email/settings) and copy the HTML code under **Your Buttondown subscribe form**:
 
 ![](/img/21.png)
 
-Next, go into your Weebly editor and add a "Custom Embed" widget.  You should get an input popping up that
+Next, go into your Weebly editor and add a "Custom Embed" widget. You should get an input popping up that
 says "Edit Custom HTML":
 
 ![](/img/22.png)

@@ -3,6 +3,7 @@ layout: post
 title: Adding a Buttondown subscription form to Webflow
 tags: fa-graduation-cap
 ---
+
 You can create a subscription form in Webflow and connect it to your Buttondown newsletter to gather email addresses and segment them in two easy steps:
 
 1. **Grabbing your subscription URL** from Buttondown
@@ -10,7 +11,7 @@ You can create a subscription form in Webflow and connect it to your Buttondown 
 
 ### Requirements
 
-1. If you haven't already, [create a Buttondown account](https://buttondown.email/register).  It's easy and only takes two minutes.
+1. If you haven't already, [create a Buttondown account](https://buttondown.email/register). It's easy and only takes two minutes.
 2. Ensure you have a [form](https://university.webflow.com/article/intro-to-forms) on your Webflow page.
 3. Ensure there's at least one **input field** on your form (set to required) with the name set to `email` and the `text type` set to email, like the below:
 
@@ -18,7 +19,7 @@ You can create a subscription form in Webflow and connect it to your Buttondown 
 
 ### Getting your subscription URL
 
-1. Log in to your Buttondown account and go to the [Share page](https://buttondown.email/share#).
+1. Log in to your Buttondown account and go to the [Share page](https://buttondown.email/settings#).
 2. Click on "as a form".
 3. Copy the URL on the second line, as highlighted below:
 
