@@ -3,6 +3,7 @@ layout: post
 title: Generating a Typescript router in Django
 description: Pre-announcing an alternative to django-js-reverse
 tags: fa-code
+canonical: https://buttondown.email/blog/2022-10-26-django-typescript-urls
 ---
 
 (Nerd alert! This post is a small technical snippet for Python and Django programmers. If you don't know what those proper nouns mean, don't worry — feel free to skip this post.)
