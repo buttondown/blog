@@ -4,6 +4,7 @@ title: Attach files to your emails
 description: Drag and drop has never been easier. (Just like Gmail.)
 tags: fa-paperclip
 image: /img/uploads/attach-share.png
+canonical: https://buttondown.email/blog/2022-07-17-attachments
 ---
 
 One of the delights in watching Buttondown take off over the past few years has been seeing the proliferation of use cases that, frankly, I never really imagined when I started building it. Teachers & faculty are using Buttondown to send lesson plans to their students; a peer group of poets uses Buttondown ("round robin style", as I've been informed) to send over drafts to edit & critique; a food truck sends out weekly locations & specials.

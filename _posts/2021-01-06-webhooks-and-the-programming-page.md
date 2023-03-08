@@ -2,10 +2,12 @@
 layout: post
 title: Webhooks and the Programming page
 tags: fa-code
+canonical: https://buttondown.email/blog/2021-01-06-webhooks-and-the-programming-page
 ---
+
 If you check your nav bar, you’ll notice a [new little section entitled **Programming**](https://buttondown.email/settings/programming). This is, as you might expect, a tab for programming your newsletter! Buttondown is getting more and more advanced at creating technical and advanced use cases for our authors, and I wanted a place to put all of these features without crowding out other parts of the dashboard.
 
-So, if you’re not interested in supercharging your newsletter (and I don’t mean that in a bad way at all: none of *my* newsletters are using webhooks!) feel free to ignore this. But if you’re interested in seeing how to better integrate Buttondown into your stack, let’s dive in!
+So, if you’re not interested in supercharging your newsletter (and I don’t mean that in a bad way at all: none of _my_ newsletters are using webhooks!) feel free to ignore this. But if you’re interested in seeing how to better integrate Buttondown into your stack, let’s dive in!
 
 ![](/img/30.png)
 
@@ -17,7 +19,7 @@ The Programming page is where you can find your API key. This was previously bur
 
 ## Webhooks
 
-Now we’re getting to the exciting stuff. After almost an entire year in private beta, webhooks are now *live*.
+Now we’re getting to the exciting stuff. After almost an entire year in private beta, webhooks are now _live_.
 
 I will spare you the how and the why and the what of webhooks: more talented writers, particularly the fine folks over at [Stripe](https://stripe.com/docs/webhooks) and [WorkOS](https://workos.com/blog/building-webhooks-into-your-application-guidelines-and-best-practices), have done a better job than I ever will.
 
@@ -40,9 +42,9 @@ To create a webhook, all you need to do is set the URL, a description, and what 
 
 ![](/img/32.png)
 
-Of course, webhooks are nice, but it’s important to understand what is actually getting fed *into* those webhooks, and your Events table gives you an overview of all events flowing through your account. Each event is listed here, along with the metadata and the payload that would be sent.
+Of course, webhooks are nice, but it’s important to understand what is actually getting fed _into_ those webhooks, and your Events table gives you an overview of all events flowing through your account. Each event is listed here, along with the metadata and the payload that would be sent.
 
-Notably, if you’re looking to test a part of your integration you can actually *replay events* from this view by clicking on the relevant event and hitting the “Replay event” button. This makes it easy for you to stage your webhooks without having to rely on manual traffic.
+Notably, if you’re looking to test a part of your integration you can actually _replay events_ from this view by clicking on the relevant event and hitting the “Replay event” button. This makes it easy for you to stage your webhooks without having to rely on manual traffic.
 
 ![](/img/34.png)
 

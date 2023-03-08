@@ -3,6 +3,7 @@ layout: post
 title: Email tracking is now off by default
 tags: fa-user-secret
 image: /img/optin-share.png
+canonical: https://buttondown.email/blog/2021-03-01-opt-in-analytics
 ---
 
 Last week I blogged about [investments in something that existing users will probably not appreciate](/2021/02/21/importer-v2)
@@ -31,8 +32,8 @@ Anyhoo. Now it's opt-in, because opinionated defaults matter. And all it was was
 
 ![](/img/optin.png)
 
-As a reminder, if you want to opt out (or now *in*) to analytics, all you have to do is go to your [Account settings page](https://buttondown.email/account).
+As a reminder, if you want to opt out (or now _in_) to analytics, all you have to do is go to your [Account settings page](https://buttondown.email/account).
 
 And stay tuned for more news on the privacy & sensible data front! My goal is to push out some changes that let you
-get information about your newsletter without having to go *whole hog* on the tracking pixel front, like conditionally enabling clicks but not opens (or vice versa)
-and adding support for anonymized tracking (so you know _what_ is opened or clicked on without knowing *who*.)
+get information about your newsletter without having to go _whole hog_ on the tracking pixel front, like conditionally enabling clicks but not opens (or vice versa)
+and adding support for anonymized tracking (so you know _what_ is opened or clicked on without knowing _who_.)

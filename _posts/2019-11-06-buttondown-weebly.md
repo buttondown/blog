@@ -2,6 +2,7 @@
 layout: post
 title: Adding a Buttondown subscription form to Weebly
 tags: fa-graduation-cap
+canonical: https://buttondown.email/blog/2019-11-06-buttondown-weebly
 ---
 
 [Weebly](https://www.weebly.com/) is a great tool by Square that makes it free and easy to build out a website

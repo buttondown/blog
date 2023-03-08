@@ -3,6 +3,7 @@ layout: post
 title: Pay-what-you-want subscriptions
 tags: fa-graduation-cap
 image: /img/pwyw-share.png
+canonical: https://buttondown.email/blog/2021-04-01-pay-what-you-want
 ---
 
 Obligatory "this is not an April Fool's joke" disclaimer aside: excited to announce that support for pay-what-you-want [^0] subscriptions are now live! You can give it a test run on [weeknotes.buttondown.email](https://weeknotes.buttondown.email).

@@ -2,6 +2,7 @@
 layout: post
 title: Slightly nicer Design settings
 tags: fa-paint-brush
+canonical: https://buttondown.email/blog/2021-01-12-slightly-nicer-settings-pages
 ---
 
 It is somewhat rare for me to be able to justify working on paying down some technical debt

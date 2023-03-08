@@ -4,8 +4,8 @@ title: Migrating Buttondown to mypy
 description: The journey of 37,000 lines of static types begins with a single annotation.
 tags: fa-code
 image: /img/uploads/mypy-share.png
+canonical: https://buttondown.email/blog/2022-01-19-buttondown-mypy
 ---
-
 
 ## What is Buttondown?
 
@@ -21,23 +21,22 @@ The longer answer, as provided by the [official mypy docs](http://mypy-lang.org/
 
 ## Why did I do this?
 
-I've actually been using something that's, like, *mypy-adjacent* for a while now. [PyCharm](https://www.jetbrains.com/pycharm/) was for a long time my Python IDE of choice [^2] and it had really strong support for type hints, meaning that a declaration like:
+I've actually been using something that's, like, _mypy-adjacent_ for a while now. [PyCharm](https://www.jetbrains.com/pycharm/) was for a long time my Python IDE of choice [^2] and it had really strong support for type hints, meaning that a declaration like:
 
     def count_words(input: str) -> int:
       return len(input.split())
 
-would be enough to provide PyCharm with information for *callers* of `count_words`, such that I would get a very angry red squiggle if I tried to write something like:
+would be enough to provide PyCharm with information for _callers_ of `count_words`, such that I would get a very angry red squiggle if I tried to write something like:
 
     arbitrary_string = "hello world"
     if "hello" in count_words(arbitrary_string):
       print("Greetings found!")
 
-This was net useful in of itself, and *even if you have no plans to integrate with mypy* I would recommend getting in the habit of using type hints! (Much electronic ink has been spilled about the niceties of writing type signatures as an exercise in thinking more deeply about your interfaces & contracts. I won't rehash those arguments, but rest assured I agree with them.)
-However, that was the depth of my investment. Back when I did this in ~2019 or so, I looked into actually providing a typecheck *step* for the Python codebase and was stymied by lack of third-party "stub" support. [^3]
+This was net useful in of itself, and _even if you have no plans to integrate with mypy_ I would recommend getting in the habit of using type hints! (Much electronic ink has been spilled about the niceties of writing type signatures as an exercise in thinking more deeply about your interfaces & contracts. I won't rehash those arguments, but rest assured I agree with them.)
+However, that was the depth of my investment. Back when I did this in ~2019 or so, I looked into actually providing a typecheck _step_ for the Python codebase and was stymied by lack of third-party "stub" support. [^3]
 That was around eighteen months or so ago, and things have improved significantly since then! On a lark, I decided to pick back up the branch (aptly named `mypy-world-domination`) and saw that both [django-stubs](https://github.com/typeddjango/django-stubs) and [boto3-stubs](https://pypi.org/project/boto3-stubs/) have progressed significantly, to the point where the majority of issues flagged by mypy were not "hey, I have no idea what `django-rest-framework` is" but "hey, you're not handling this `Optional` correctly."
 
-After some configuration futzing, I was greeted with a veritable *wall* of `mypy` errors:
-
+After some configuration futzing, I was greeted with a veritable _wall_ of `mypy` errors:
 
     $ poetry run invoke typecheck
     utils/functional.py:58: error: Incompatible return value type (got "Dict[Any, Any]", expected "Stream")
@@ -62,7 +61,7 @@ The first stumbling block is perhaps the most stereotypical: dealing with option
         return
       stripe_subscription.cancel()
 
-It's fair to say, too, that this is perhaps *working as intended*. Nulls are [the worst thing or whatever that quote is](https://www.lucidchart.com/techblog/2015/08/31/the-worst-mistake-of-computer-science/), and I think my codebase suffers from "None-as-control-flow" syndrome a good deal. Part of this has been ameliorated by borrowing some concepts like [Result types](https://en.wikipedia.org/wiki/Result_type) from other, more mature static environments, but I would love to see some a bit more semantic sugar not unlike the constructs offered by [TypeScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) or [Swift](https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html):
+It's fair to say, too, that this is perhaps _working as intended_. Nulls are [the worst thing or whatever that quote is](https://www.lucidchart.com/techblog/2015/08/31/the-worst-mistake-of-computer-science/), and I think my codebase suffers from "None-as-control-flow" syndrome a good deal. Part of this has been ameliorated by borrowing some concepts like [Result types](https://en.wikipedia.org/wiki/Result_type) from other, more mature static environments, but I would love to see some a bit more semantic sugar not unlike the constructs offered by [TypeScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) or [Swift](https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html):
 
     const person = {
       name: "Jane",
@@ -78,7 +77,7 @@ It's fair to say, too, that this is perhaps *working as intended*. Nulls are [th
         },
       }]
     };
-    
+
     // Returns [undefined, "calico"]
     console.log(person.pets.map(pet => pet.breed?.type)
 
@@ -96,7 +95,7 @@ In what is probably one of many regrettable architectural decisions, I rely on D
 This approach is valid Python, and [mostly recommended within Django documentation](https://docs.djangoproject.com/en/4.0/topics/http/middleware/#writing-your-own-middleware), but `mypy` is not a fan for two reasons:
 
 1. We're setting global state on an `HttpRequest` which has no concept of a `newsletter_for_subdomain` attribute.
-2. We then need a way of *retrieving* that attribute from an `HttpRequest` object; any subsequent access of `request.newsletter_for_subdomain` will also raise warning signs.
+2. We then need a way of _retrieving_ that attribute from an `HttpRequest` object; any subsequent access of `request.newsletter_for_subdomain` will also raise warning signs.
 
 My suspicion is that the right approach here is to declare an omnibus `HttpRequest` subclass with all potential global payloads:
 
@@ -115,10 +114,10 @@ Django (and thus Buttondown) express foreign key relationships as optionals. For
       email_address = EmailField()
       creation_date = DateTimeField()
       import_date = DateTimeField(null=True) # blank if was not imported
-    
+
       # Every subscriber corresponds to a single newsletter
       newsletter = ForeignKey(Newsletter)
-    
+
       # Premium subscribers also exist in Stripe
       stripe_subscription = ForeignKey(StripeSubscription, null=True)
 
@@ -132,8 +131,8 @@ The tricky part here is when you want to express an invariant upon all Subscribe
           yield subscriber
 
 Sadly, `mypy` is not a huge fan of this — `subscriber.stripe_subscription` is an `Optional[StripeSubscription]` and calling `.status` on it is therefore dangerous.
-You could, I think, persuasively argue that this is solved with something like a `Result` type (there's a very interesting Pythonic one [here](https://github.com/dry-python/returns)). A more elegant solution, though, and one that closely maps onto [TypeScript's approach to nuanced type refinement](https://www.typescriptlang.org/docs/handbook/2/narrowing.html), would be being able to declare a version of Subscriber that *has* a StripeSubscription.
-This issue in of itself is still interesting, though, because it suggests a better way to structure this cron and avoid the refinement entirely — iterating on the *subscription* rather than the *subscriber*:
+You could, I think, persuasively argue that this is solved with something like a `Result` type (there's a very interesting Pythonic one [here](https://github.com/dry-python/returns)). A more elegant solution, though, and one that closely maps onto [TypeScript's approach to nuanced type refinement](https://www.typescriptlang.org/docs/handbook/2/narrowing.html), would be being able to declare a version of Subscriber that _has_ a StripeSubscription.
+This issue in of itself is still interesting, though, because it suggests a better way to structure this cron and avoid the refinement entirely — iterating on the _subscription_ rather than the _subscriber_:
 
     def check_premium_subscriptions() -> Iterable[Subscriber]:
       subscriptions = StripeSubscription.objects.filter(status='cancelled')
@@ -158,13 +157,14 @@ That was around two solid engineer-days spread across two weeks (I was doing thi
 - 20% of the work was unbounded and painful, a bit of an "unknown unknowns" situation ("how do I express a strongly typed spread operator?"; "how do I express a partial mock?")
 
 ## What advice do I wish I had?
-- This might be cheating, but if you know you want to *eventually* move to `mypy` start as early as possible. Even if you need to litter your codebase with `Any` and `# type: ignore` annotations, the sooner you start the better.
+
+- This might be cheating, but if you know you want to _eventually_ move to `mypy` start as early as possible. Even if you need to litter your codebase with `Any` and `# type: ignore` annotations, the sooner you start the better.
 - Getting the ground running with functional bits of your codebase as quickly as possible facilitates the entire process! Rather than trying to boil the ocean in your first go, start off with small little ponds of well-typed functionality before moving onto the hairier parts of your codebase. Django's app-based architecture lends itself very well to this, since ideally you're breaking out logically disjoint parts of your application early and often.
 - Aggressively separate "type reification" (keeping the logic of the codeabse intact, but annotating as necessary) with "type fixes" (changing the logic of the codebase in order to clean up your types). My first few efforts commingled the two, which led to issues where I was seeing divergences in the behavior of unit tests and it wasn't immediately obvious what changes had caused them.
 
 ## Was it worth it?
 
-*Yes!* As mentioned above, I don't think I'd advise folks in trying to do a "big-bang"-style migration in the manner I did unless your codebase is sufficiently small; because I was working on this branch alongside other feature branches, churn was non-trivial and it would have made more sense to go package-by-package, starting with smaller and more reified interfaces and moving onward.
+_Yes!_ As mentioned above, I don't think I'd advise folks in trying to do a "big-bang"-style migration in the manner I did unless your codebase is sufficiently small; because I was working on this branch alongside other feature branches, churn was non-trivial and it would have made more sense to go package-by-package, starting with smaller and more reified interfaces and moving onward.
 One of the more common cliches about shifting towards type safety, as alluded to earlier, is the concept of "forcing you to think in types". An example of this is something like the below method that I had kicking around:
 
     def send_draft(email, recipient)
@@ -177,17 +177,17 @@ This need to declare an interface for something that "looks like a person with a
 
     def send_draft(email: Email, email_address: str) -> None
 
-That being said, "thinking about types" and reifying your interfaces are caviar problems. I like those things, but I (and likely you) am in a position where elegant abstractions are a luxury compared to the value proposition of *writing safer code*. To that end, I thought I'd end by talking about some specific, real-world (albeit silly!) bugs that mypy revealed for me:
+That being said, "thinking about types" and reifying your interfaces are caviar problems. I like those things, but I (and likely you) am in a position where elegant abstractions are a luxury compared to the value proposition of _writing safer code_. To that end, I thought I'd end by talking about some specific, real-world (albeit silly!) bugs that mypy revealed for me:
 
 1. I have a simple dataclass — `AdminNewScheduledEmailNotifier` — that pings me in Slack whenever a new email is scheduled. I pass in a `ScheduledEmail` but mistakenly declared the type as an `Email`, which is an object with slightly different properties. Notably, `ScheduledEmail` has `schedule_date` whereas `Email` has `publish_date`. `mypy` detected this — and found a code branch where I was not getting notified about newly scheduled emails for certain newsletters.
-2. I display cohort information for subscribers — essentially how many subscribers a given newsletter pulls up in a given bucket of time. I declared the dataclass for this structure to be of a `List[List[float]]` whereas in fact it was a `List[List[Optional[float]]`; this meant that while the Python side of things was fine (dataclasses do not throw if you pass in malformed data) my frontend assumptions of the returned data were not, and as a result mypy actually helped me fix a *frontend* bug that I had been nigh-unable to reproduce for months.
-3. I had a whole lot of duplicative test code where I was just passing in completely extraneous kwargs! For example, `Subscriber.objects.create(user=user)` where `user` is not actually an attribute on Subscriber. While this isn't a *bug*, it's certainly confusing, and can lead to serious issues down the line when I [programmatically modify the codebase](https://github.com/facebookarchive/codemod).
+2. I display cohort information for subscribers — essentially how many subscribers a given newsletter pulls up in a given bucket of time. I declared the dataclass for this structure to be of a `List[List[float]]` whereas in fact it was a `List[List[Optional[float]]`; this meant that while the Python side of things was fine (dataclasses do not throw if you pass in malformed data) my frontend assumptions of the returned data were not, and as a result mypy actually helped me fix a _frontend_ bug that I had been nigh-unable to reproduce for months.
+3. I had a whole lot of duplicative test code where I was just passing in completely extraneous kwargs! For example, `Subscriber.objects.create(user=user)` where `user` is not actually an attribute on Subscriber. While this isn't a _bug_, it's certainly confusing, and can lead to serious issues down the line when I [programmatically modify the codebase](https://github.com/facebookarchive/codemod).
 4. Lots and lots of mishandled Optionals. Too many to count.
 
 ## The promised land
 
 I'm writing this post a few weeks after I actually completed and shipped the migration, so as to provide space for a bit of a coda — now that I've actually done the dang thing, what does day-to-day development feel like?
-The answer is — more of the same, but with an additional guard rail. I'm writing code with very, *very* few optionals now unless a foreign key is involved, and `precommit` lets me know when I've missed an off-ramp somewhere.
+The answer is — more of the same, but with an additional guard rail. I'm writing code with very, _very_ few optionals now unless a foreign key is involved, and `precommit` lets me know when I've missed an off-ramp somewhere.
 Plus, I get to write functional pipelines like the following:
 
     # A function that pulls in archived emails from an external source such as WordPress, Hey World, or Tinyletter
@@ -216,13 +216,13 @@ Whereas before, Python made it a dangerous proposition to deal with partials and
 
 ## Useful resources
 
-- [Hypermodern Python](https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769), a very opinionated series of essays about structuring a well-typed & well-executed Python codebase. While this wasn't the *specific* impetus for me going whole-hog on `mypy`, it certainly was an accelerating factor.
+- [Hypermodern Python](https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769), a very opinionated series of essays about structuring a well-typed & well-executed Python codebase. While this wasn't the _specific_ impetus for me going whole-hog on `mypy`, it certainly was an accelerating factor.
 - [typeshed](https://github.com/python/typeshed), the official repository of type stubs. Without this package's growth and prominence I would have been at an absolute loss.
 - [dry-python's returns](https://github.com/dry-python/returns), a collection of utility functions to improve type safety in your codebase. I don't use a lot of this package — mostly I use the pipeline functions which allow me to compose functions in a typesafe manner — but it's an excellent resource to read through and shift over parts of your codebase to more of a mypy-friendly mode.
 - [Zulip](https://blog.zulip.com/2016/10/13/static-types-in-python-oh-mypy/) and [Cal Paterson](https://calpaterson.com/mypy-hints.html) both had great writeups of their shifts to mypy.
 
 [^1]: Perhaps a more accurate comparison here would be with [Sorbet](https://sorbet.org/), a Ruby type checker that sits on top of Ruby. But I am surmising that more people are familiar with TypeScript than with Sorbet, so there you go.
-[^2]: I've since replaced PyCharm with VSCode. This is for two reasons, neither of which are PyCharm’s fault! VSCode's Vue ecosystem is really robust compared to JetBrains', and I use VSCode at my day job (in the rare occurrences when I code these days), so context-switching is minimal. Still, I heartily recommend PyCharm if you're interested in very, *very* strong integration with the Python ecosystem.
+[^2]: I've since replaced PyCharm with VSCode. This is for two reasons, neither of which are PyCharm’s fault! VSCode's Vue ecosystem is really robust compared to JetBrains', and I use VSCode at my day job (in the rare occurrences when I code these days), so context-switching is minimal. Still, I heartily recommend PyCharm if you're interested in very, _very_ strong integration with the Python ecosystem.
 [^3]: "stubs" are a silly name for a useful concept that ideally should not exist. They refer to separately-published sets of type signatures for packages that themselves do not have type signatures. For instance, `Django` has made a [conscious choice to not yet include type information in their package](https://code.djangoproject.com/ticket/29299), so a stubs package — aptly titled [django-stubs](https://github.com/typeddjango/django-stubs) — consists solely of type signatures for Django itself.
 [^4]: This is an incantation that may not look familiar. I use [poetry](https://python-poetry.org/) for Python dependency management and [Invoke](https://www.pyinvoke.org/) for task execution.
 

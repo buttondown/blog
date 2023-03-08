@@ -2,6 +2,7 @@
 layout: post
 title: Adding a Buttondown subscription form to Webflow
 tags: fa-graduation-cap
+canonical: https://buttondown.email/blog/2019-10-11-adding-a-buttondown-subscription-form-to-webflow
 ---
 
 You can create a subscription form in Webflow and connect it to your Buttondown newsletter to gather email addresses and segment them in two easy steps:

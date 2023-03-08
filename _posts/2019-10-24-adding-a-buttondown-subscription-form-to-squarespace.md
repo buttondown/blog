@@ -2,6 +2,7 @@
 layout: post
 title: Adding a Buttondown subscription form to Squarespace
 tags: fa-graduation-cap
+canonical: https://buttondown.email/blog/2019-10-24-adding-a-buttondown-subscription-form-to-squarespace
 ---
 
 Squarespace is a great tool that makes it easy to create beautiful websites. You can enhance your Squarespace site by connecting it with Buttondown — making it easy for site visitors to sign up for updates to your newsletter.

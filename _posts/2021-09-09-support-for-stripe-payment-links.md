@@ -2,7 +2,9 @@
 layout: post
 title: Support for Stripe Payment Links
 tags: fa-money
+canonical: https://buttondown.email/blog/2021-09-09-support-for-stripe-payment-links
 ---
+
 A few months ago, Stripe launched Payment Links — the absolute easiest way to collect payments (both one-time and on a recurring basis) on the internet with absolutely no code required.
 
 (A disclosure: I work for Stripe! We’re hiring.)
@@ -15,7 +17,7 @@ Historically, the only way you’ve been able to collect paid subscribers for yo
 
 This is a good workflow, but it’s certainly not perfect for all use cases. Buttondown’s subscription paradigm is not perfectly portable, and doesn’t yet support things like Apple Pay or local payment methods common in European markets.
 
- Enter: Payment Links!
+Enter: Payment Links!
 
 ![The screen to add a new Payment Link in Stripe.](https://i.ibb.co/7V7MMrF/Payment-page.png)
 ￼

@@ -3,6 +3,7 @@ layout: post
 title: Buttondown's new pricing system
 description: All about the new pricing plans, and I promise to try and take it easy on the marketing speak.
 tags: fa-money
+canonical: https://buttondown.email/blog/2022-05-13-repricing
 ---
 
 First off — I've read a countless number of these posts before and they're all couched in evasive, annoying language. It's very annoying! So let me get a few things out of the way:
@@ -74,11 +75,11 @@ It's now _much_ easier for someone to visit Buttondown and understand how much t
 
 ## You said "shifting Buttondown's clientele away from free users" and _I'm_ a free user.
 
-I'm sorry! I really am. 
+I'm sorry! I really am.
 
-I won't sugarcoat it — Buttondown's *free* tier is shrinking pretty significantly, from a thousand subscribers to a mere hundred. 
+I won't sugarcoat it — Buttondown's _free_ tier is shrinking pretty significantly, from a thousand subscribers to a mere hundred.
 
-Buttondown has grown a *lot* over the past few years; when I added the generous free tier back in 2016 I imagined a few friends using the platform, not tens of thousands of accounts sending millions of emails every month (and sending me thousands of questions & feature requests.)
+Buttondown has grown a _lot_ over the past few years; when I added the generous free tier back in 2016 I imagined a few friends using the platform, not tens of thousands of accounts sending millions of emails every month (and sending me thousands of questions & feature requests.)
 
 I've noticed two motifs alongside this growth:
 

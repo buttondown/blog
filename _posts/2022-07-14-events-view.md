@@ -4,6 +4,7 @@ title: A better Events view
 description: Debug your webhook integrations!
 tags: fa-code
 image: /img/uploads/events-share.png
+canonical: https://buttondown.email/blog/2022-07-14-events-view
 ---
 
 (Nerd alert! This post is about a fairly nerdy part of Buttondown’s featureset — _webhooks_. If you’re a less technical user, this stuff probably doesn’t apply to you.)

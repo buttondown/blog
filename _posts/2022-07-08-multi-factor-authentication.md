@@ -4,6 +4,7 @@ title: Secure your account with multi-factor authentication
 description: Buttondown offers support for Google Authenticator (et al)
 tags: fa-lock
 image: /img/uploads/mfa-share.png
+canonical: https://buttondown.email/blog/2022-07-08-multi-factor-authentication
 ---
 
 I suspect that there are two groups of people who read the title of this blog post: those who are saying "oh _finally_!" and those who are unfamiliar with the term 'multi-factor authentication'.

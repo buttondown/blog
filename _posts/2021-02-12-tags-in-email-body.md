@@ -3,6 +3,7 @@ layout: post
 title: Referencing subscriber tags in your newsletter
 tags: fa-tag
 image: /img/tags-share.png
+canonical: https://buttondown.email/blog/2021-02-12-tags-in-email-body
 ---
 
 You've been able to reference subscriber metadata in your emails for

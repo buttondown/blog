@@ -3,11 +3,12 @@ layout: post
 title: You can now integrate with Plausible!
 tags: fa-pie-chart
 image: /img/plausible-share.png
+canonical: https://buttondown.email/blog/2021-02-22-buttondown-plus-plausible
 ---
 
 <img src="/img/plausible.png" class="kg-image" style="border: 0px">
 
-[Plausible](https://plausible.io/) is a simple, privacy-friendly alternative to Google Analytics. It's fully compliant with GDPR, CCPA, and PECR, and offers *no cookie use whatsoever*. It's a great way to learn more about your site and your subscribers & visitors while respecting their privacy.
+[Plausible](https://plausible.io/) is a simple, privacy-friendly alternative to Google Analytics. It's fully compliant with GDPR, CCPA, and PECR, and offers _no cookie use whatsoever_. It's a great way to learn more about your site and your subscribers & visitors while respecting their privacy.
 
 I've been a huge fan of what Plausible has been doing, and I'm excited to partner with them and integrate our two services: their ethos is _very_ well-aligned with Buttondown's.
 

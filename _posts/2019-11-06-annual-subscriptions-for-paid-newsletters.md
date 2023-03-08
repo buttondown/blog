@@ -2,6 +2,7 @@
 layout: post
 title: Annual subscriptions for paid newsletters
 tags: fa-money
+canonical: https://buttondown.email/blog/2019-11-06-annual-subscriptions-for-paid-newsletters
 ---
 
 The "annual plan upsell" is a classic piece of software marketing advice. Take it from the folks at [Profitwell](https://www.profitwell.com/blog/here-is-why-every-saas-company-needs-an-annual-plan):

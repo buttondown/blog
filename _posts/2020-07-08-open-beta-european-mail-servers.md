@@ -1,11 +1,13 @@
 ---
 layout: post
-title: 'Open Beta: European mail servers'
+title: "Open Beta: European mail servers"
 tags: fa-globe
+canonical: https://buttondown.email/blog/2020-07-08-open-beta-european-mail-servers
 ---
-I am particularly excited to share that I am now forwarded some traffic through the EU.  You may be wondering: *uh, why?*
 
-Well, for starters, this means you can make sure your customer data and emails are processed without leaving the EU.  There's increasing complexity in how to manage data, and also a healthy dose of better-safe-than-sorryism.
+I am particularly excited to share that I am now forwarded some traffic through the EU. You may be wondering: _uh, why?_
+
+Well, for starters, this means you can make sure your customer data and emails are processed without leaving the EU. There's increasing complexity in how to manage data, and also a healthy dose of better-safe-than-sorryism.
 
 Plus, location matters. EU-borne emails are going to be faster and have better inbox placement rates than US-borne emails if the majority of your subscribers are European.
 

@@ -2,6 +2,7 @@
 layout: post
 title: Better upselling for premium subscriptions
 tags: fa-money
+canonical: https://buttondown.email/blog/2021-09-28-better-upselling
 ---
 
 To be blunt, the upselling experience for paid subscribers has been…bad. This is entirely my fault!

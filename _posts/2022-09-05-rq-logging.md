@@ -3,6 +3,7 @@ layout: post
 title: Better logging in RQ
 description: A quick hit nerd post for all you Pythonistas out there.
 tags: fa-pencil-square
+canonical: https://buttondown.email/blog/2022-09-05-rq-logging
 ---
 
 (Nerd alert! This post is a small technical snippet for Python and Django programmers. If you don't know what those proper nouns mean, don't worry — feel free to skip this post.)

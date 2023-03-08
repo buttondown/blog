@@ -3,6 +3,7 @@ layout: post
 title: All your emails, in one place
 description: The first of many architectural changes!
 tags: fa-pencil-square
+canonical: https://buttondown.email/blog/2022-09-21-unified-emails
 ---
 
 If you log on to Buttondown today (or, I suppose, any date in the foreseeable future), you'll notice that the sidebar is a little smaller. Gone are the three separate links to **drafts**, **scheduled emails**, and **archive** — in its stead is a combined link, **emails**, that has, well, all three of those things.

@@ -3,8 +3,8 @@ layout: post
 title: Accept whatever currency you want for your paid newsletter
 tags: fa-money
 image: /img/paid-subs-share.png
+canonical: https://buttondown.email/blog/2021-01-28-more-currencies-for-paid-newsletters
 ---
-
 
 <img src="/img/currency-dropdown.png" class="kg-image" style="border: 0px">
 
