@@ -20,4 +20,13 @@
     <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
   {% endif %}
 
+  {% if page.canonical %}
+  <script>
+    // Redirect to canonical URL.
+    if (window.location.href != "{{ page.canonical }}") {
+      window.location.href = "{{ page.canonical }}";
+    }
+  </script>
+  {% endif %}
+
 </head>
