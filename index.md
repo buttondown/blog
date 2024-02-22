@@ -38,3 +38,8 @@ layout: page
 {% endfor %}
 
   </ul>
+
+  
+<script>
+window.location.href = "https://buttondown.email/blog";
+</script>
